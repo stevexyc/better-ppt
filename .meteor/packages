@@ -7,3 +7,6 @@ standard-app-packages
 autopublish
 insecure
 reveal-js
+ace-editor
+iron-router
+font-awesome

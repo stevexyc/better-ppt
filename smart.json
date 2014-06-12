@@ -1,5 +1,8 @@
 {
   "packages": {
-    "reveal-js": {}
+    "reveal-js": {},
+    "ace-editor": {},
+    "iron-router": {},
+    "font-awesome": {}
   }
 }
