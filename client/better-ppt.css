@@ -1,3 +1,19 @@
+.home-link {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	opacity: 0.5;
+}
+.home-link a {
+	text-decoration: none;
+}
+.home-link .deck-title {
+	color: #888;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	margin-left: 15px;
+}
+
 .reveal .controls {
 	position: absolute;
 }
@@ -58,6 +74,7 @@
 	position: absolute;
 	top: 0;
 	right: 5px;
+	opacity: 0.5;
 }
 
 .save-control {
@@ -97,7 +114,6 @@
 }
 
 .theme-options.hide {
-	//height: 0;
 	width: 0;
 	overflow: hidden;
 	opacity: 0;
@@ -105,14 +121,65 @@
 
 .theme-option {
 	display: inline-block;
+	float: left;
 	padding: 8px;
+	margin-left: 1px;
 	font-size: 12px ;
 	line-height: 17px;
 	cursor: pointer;
 	font-family: Arial, sans-serif;
 }
 
-.theme-option:hover {
+.theme-option:hover, .theme-option.active-theme {
 	background-color: #71E9F4;
 	color: #333;
+}
+
+/*  home-wrap */
+.home-overlay {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: whitesmoke;
+	z-index: -1;
+}
+
+.home-wrap {
+	width: 80vw;
+	margin-left: 10vw;
+	font-family: Arial, sans-serif;
+}
+
+.slidedeck-wrap {
+	position: relative;
+}
+
+.preview-image {
+	margin-right: 1vw;
+}
+
+.preview-image iframe {
+	width: 38vw;
+	height: 30vw;
+}
+
+.slidedeck-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 22px;
+	padding-top: 10px;
+	background-color: black;
+	width: 38vw;
+	text-align: center;
+	text-decoration: none;
+	color: #eee;
+	-webkit-transition: background-color 500ms ease-out;
+	-moz-transition: background-color 500ms ease-out;
+	-o-transition: background-color 500ms ease-out;
+	transition: background-color 500ms ease-out;
+}
+
+.slidedeck-link:hover {
+	background-color: skyblue;
+	color: black;
 }

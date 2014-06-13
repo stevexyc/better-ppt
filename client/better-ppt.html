@@ -1,0 +1,60 @@
+<head>
+  	<title>better-ppt</title>
+	<link rel="stylesheet" href="/packages/reveal-js/reveal.js/css/theme/default.css" id="theme"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+</body>
+
+<template name="appTemplate">
+		{{> slideTemplate}}
+</template>
+
+
+<template name="slideTemplate">
+  
+	<div class="reveal">
+	  <div class="slides">
+			{{{this.html}}}
+		</div>
+	</div>
+
+	<div class="editor-panel hide">
+		<pre id="editor"></pre>
+		<span class="edit-control fa fa-cog"></span>
+		<span class="save-control fa fa-save"></span>
+	    <span class="theme-control fa fa-circle-o"></span>
+		<div class="theme-options hide">
+			{{#each theme}}
+				<div data-value="{{this}}"
+				class="theme-option {{activetheme}}">
+				{{this}}</div>
+			{{/each}}
+		</div>
+	</div>
+
+	<span class="home-link">
+		<a class="fa fa-home" href="/"></a>
+		<span class="deck-title">{{this.title}}</span>
+	</span>
+</template>
+
+<template name="loading">
+	loading
+</template>
+
+<template name="fancyhome">
+	<div class="home-overlay"></div>
+	<div class="home-wrap">
+		<h1>fancy-shmancy index</h1>
+		{{#each slidedeck}}
+		<div class="slidedeck-wrap">
+			<div class="preview-image">
+				<iframe src="/{{slug}}" frameborder="0"></iframe>
+			</div>
+			<a class="slidedeck-link" href="/{{slug}}/">{{title}}</a>
+		</div>
+		{{/each}}
+	</div>
+</template>
